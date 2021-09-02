@@ -6,5 +6,5 @@
 
 主程序界面如下图所示：
 
-![mainWindow](.\imgs\mainwindow.png)
+![mainWindow](./imgs/mainwindow.png)
 
