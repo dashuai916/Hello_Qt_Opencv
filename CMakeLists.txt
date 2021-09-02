@@ -20,12 +20,18 @@ set(PROJECT_SOURCES
         MainWindow.cpp
         MainWindow.h
         MainWindow.ui
+        icon.qrc	# 需要手动添加
 )
+
+#set(APP_ICON_RESOURCE_WINDOWS "${CMAKE_CURRENT_SOURCE_DIR}/ico.rc")
+#add_executable(ico main.cpp ${APP_ICON_RESOURCE_WINDOWS})
+set(app_icon_resource_windows "${CMAKE_CURRENT_SOURCE_DIR}/ico.rc")	# 手动添加
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(Hello_Qt_Opencv
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        ${app_icon_resource_windows}	# 手动添加
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Hello_Qt_Opencv APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
